@@ -1,7 +1,8 @@
-package com.androidwind.image;
+package com.androidwind.image.glide;
 
 import android.widget.ImageView;
 
+import com.androidwind.image.base.BaseImageOptions;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 /**

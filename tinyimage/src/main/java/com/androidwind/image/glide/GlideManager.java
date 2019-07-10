@@ -1,4 +1,4 @@
-package com.androidwind.image;
+package com.androidwind.image.glide;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -40,13 +40,12 @@ public class GlideManager {
             if (options.getWidth() != 0 && options.getHeight() != 0) {
                 request.override(options.getWidth(), options.getHeight());
             }
-
             // 磁盘存储
             if (options.getCacheStrategy() != null) {
                 request.diskCacheStrategy(options.getCacheStrategy());
             }
             // gif动画
-            if(options.isGif()){
+            if (options.isGif()) {
                 request.asGif();
             }
             // imageView控件

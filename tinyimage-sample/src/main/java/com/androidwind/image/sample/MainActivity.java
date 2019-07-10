@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.androidwind.image.GlideOptions;
-import com.androidwind.image.GlideManager;
-import com.androidwind.image.GlideStrategy;
+import com.androidwind.image.glide.GlideOptions;
+import com.androidwind.image.glide.GlideManager;
+import com.androidwind.image.glide.GlideStrategy;
 import com.androidwind.image.ImageLoader;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

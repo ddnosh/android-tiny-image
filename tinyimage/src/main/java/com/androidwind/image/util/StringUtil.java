@@ -1,4 +1,4 @@
-package com.androidwind.image;
+package com.androidwind.image.util;
 
 import java.text.DecimalFormat;
 

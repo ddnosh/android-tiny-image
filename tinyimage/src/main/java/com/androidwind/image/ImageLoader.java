@@ -2,6 +2,9 @@ package com.androidwind.image;
 
 import android.content.Context;
 
+import com.androidwind.image.base.BaseImageOptions;
+import com.androidwind.image.base.BaseStrategy;
+
 /**
  * @author ddnosh
  * @website http://blog.csdn.net/ddnosh
