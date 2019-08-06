@@ -34,4 +34,24 @@ public class BaseImageOptions { //图片基本属性
     public int getErrorImage() {
         return errorImage;
     }
+
+    public void setResId(int resId) {
+        this.resId = resId;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setImageView(ImageView imageView) {
+        this.imageView = imageView;
+    }
+
+    public void setPlaceholder(int placeholder) {
+        this.placeholder = placeholder;
+    }
+
+    public void setErrorImage(int errorImage) {
+        this.errorImage = errorImage;
+    }
 }
