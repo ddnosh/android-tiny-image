@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             TinyOptions options = new TinyOptions();
             options.setUrl("https://www.baidu.com/img/bd_logo1.png");
             options.setImageView(iv);
+            options.setPlaceholder(R.mipmap.default_avatar);
+            options.setHeight(100);
+            options.setWidth(100);
             TinyManager.getInstance().display(this, options);
         }
     }

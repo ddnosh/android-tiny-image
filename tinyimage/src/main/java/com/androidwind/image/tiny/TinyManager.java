@@ -7,6 +7,7 @@ import com.androidwind.http.HttpUtil;
 import com.androidwind.http.TinyHttp;
 import com.androidwind.http.callback.BitmapHttpCallBack;
 import com.androidwind.http.callback.ImageHttpCallBack;
+import com.androidwind.image.util.BitmapUtil;
 import com.androidwind.image.util.StringUtil;
 import com.androidwind.task.Task;
 import com.androidwind.task.TinyTaskExecutor;
@@ -35,6 +36,10 @@ public class TinyManager {
 
     public void display(Context context, final TinyOptions options) {
         if (context != null && options != null) {
+            //placeholder
+            if (options.getPlaceholder() > 0 && options.getImageView() != null) {
+                options.getImageView().setImageResource(options.getPlaceholder());
+            }
             //url
             if (!StringUtil.isEmpty(options.getUrl())) {
                 TinyHttp.get()
@@ -72,6 +77,10 @@ public class TinyManager {
     }
 
     private Bitmap handleBitmap(Bitmap bitmap, TinyOptions options) {
+        //width && height
+        if (options.getWidth() > 0 || options.getHeight() > 0) {
+            return BitmapUtil.scaleImageTo(bitmap, options.getWidth(), options.getHeight());
+        }
         return bitmap;
     }
 }

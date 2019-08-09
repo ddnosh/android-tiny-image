@@ -9,7 +9,25 @@ import com.androidwind.image.base.BaseImageOptions;
  * @website http://blog.csdn.net/ddnosh
  */
 public class TinyOptions extends BaseImageOptions {
+    private int width;
+    private int height;
     private TinyImageCallback callback;
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     public TinyImageCallback getCallback() {
         return callback;
@@ -21,6 +39,7 @@ public class TinyOptions extends BaseImageOptions {
 
     public interface TinyImageCallback {
         void OnSuccess(Bitmap bitmap);
+
         void OnFail();
     }
 }
