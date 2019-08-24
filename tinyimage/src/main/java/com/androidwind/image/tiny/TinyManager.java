@@ -44,7 +44,7 @@ public class TinyManager {
             if (!StringUtil.isEmpty(options.getUrl())) {
                 TinyHttp.get()
                         .url(options.getUrl())
-                        .callback(new BitmapHttpCallBack(HttpUtil.getLogDir(context)) {
+                        .callback(new BitmapHttpCallBack() {
                             @Override
                             public void OnMainSuccess(final Bitmap bitmap) {
                                 TinyTaskExecutor.execute(new Task<Bitmap>() {
@@ -69,7 +69,7 @@ public class TinyManager {
                             public void OnMainFail(String errorMessage) {
 
                             }
-                        }).execute();
+                        }.outputDir(HttpUtil.getLogDir(context))).execute();
             } else {
 
             }
